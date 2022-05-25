@@ -1,6 +1,5 @@
 from django.db import models
-from django.db.models.fields import CharField
-
+from django.db.models.fields import CharField, DateField
 
 # Create your models here.
 
@@ -18,9 +17,8 @@ class Todo(models.Model):
     priority = models.CharField(max_length=10, choices=PRIORITY)
     isCompleted = models.BooleanField(default=False)
 
-    updated_date = models.DateTimeField(auto_now=True)
+    uptated_date = models.DateTimeField(auto_now=True)
     created_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.title
-        
